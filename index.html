@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom Checkbox/Radio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>
+            <h1>Inline checkbox</h1>
+            <div class="checkbox_wrapper inline">
+                <label class="checkbox_outer">
+                    <input class="custom_input" type="checkbox">
+                    <span>Custom checkbox</span>
+                </label>
+            </div>
+            <div class="checkbox_wrapper inline">
+                <label class="checkbox_outer">
+                    <input class="custom_input" type="checkbox">
+                    <span>Custom checkbox</span>
+                </label>
+            </div>
+            <div class="checkbox_wrapper inline">
+                <label class="checkbox_outer">
+                    <input class="custom_input" type="checkbox">
+                    <span>Custom checkbox</span>
+                </label>
+            </div>
+        </li>
+        <li>
+            <h1>Checkbox</h1>
+            <div class="checkbox_wrapper">
+                <label class="checkbox_outer">
+                    <input class="custom_input" type="checkbox">
+                    <span>Custom checkbox</span>
+                </label>
+            </div>
+            <div class="checkbox_wrapper">
+                <label class="checkbox_outer">
+                    <input class="custom_input" type="checkbox">
+                    <span>Custom checkbox</span>
+                </label>
+            </div>
+            <div class="checkbox_wrapper">
+                <label class="checkbox_outer">
+                    <input class="custom_input" type="checkbox">
+                    <span>Custom checkbox</span>
+                </label>
+            </div>
+        </li>
+        <li>
+            <h1>Inline Radio</h1>
+            <div class="radio_wrapper inline">
+                <label class="radio_outer">
+                    <input class="custom_input" name="inline_radio" type="radio">
+                    <span>Custom radio</span>
+                </label>
+            </div>
+            <div class="radio_wrapper inline">
+                <label class="radio_outer">
+                    <input class="custom_input" name="inline_radio" type="radio">
+                    <span>Custom radio</span>
+                </label>
+            </div>
+            <div class="radio_wrapper inline">
+                <label class="radio_outer">
+                    <input class="custom_input" name="inline_radio" type="radio">
+                    <span>Custom radio</span>
+                </label>
+            </div>
+        </li>
+        <li>
+            <h1>Radio</h1>
+            <div class="radio_wrapper">
+                <label class="radio_outer">
+                    <input class="custom_input" name="radiobox" type="radio">
+                    <span>Custom radio</span>
+                </label>
+            </div>
+            <div class="radio_wrapper">
+                <label class="radio_outer">
+                    <input class="custom_input" name="radiobox" type="radio">
+                    <span>Custom radio</span>
+                </label>
+            </div>
+            <div class="radio_wrapper">
+                <label class="radio_outer">
+                    <input class="custom_input" name="radiobox" type="radio">
+                    <span>Custom radio</span>
+                </label>
+            </div>
+        </li>
+    </ul>
+
+    <script>
+        $(document).ready(function(){
+            $(".checkbox_outer").click(function(){
+                $(this).toggleClass("checked");
+            })
+
+            $(".radio_outer").click(function(){
+                $(this).closest(".radio_wrapper").siblings().find(".radio_outer").removeClass("checked");
+                $(this).closest(".radio_wrapper").find(".radio_outer").addClass("checked");
+            })
+        })
+    </script>
+    
+</body>
+</html>
