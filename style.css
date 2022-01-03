@@ -49,6 +49,6 @@ ul li { width: 50%; margin-bottom: 50px; }
 .radio_outer_bd { position: relative; display: inline-block; } 
 
 .radio_outer_bd input:checked + span:before {border-width: 6px; }
-.radio_outer_bd > span:before { content: ''; position: absolute; left: 0; top: -1px; height: 20px; width: 20px; border: 1px solid #000; border-radius: 50%;transition: border 0.2s; } 
+.radio_outer_bd > span:before { content: ''; position: absolute; left: 0; top: -1px; height: 20px; width: 20px; border: 1px solid #000; border-radius: 50%;transition: border 0.2s border 0.2s ease-in-out; } 
 .radio_outer_bd > span {color: #000; position: relative;display: inline-block;padding-left: 25px; }
 .radio_outer_bd input { position: absolute; left: 0; top: 0; right: 0; bottom: 0; height: 100%; width: 100%; opacity: 0; cursor: pointer; margin: 0; z-index: 1; }
